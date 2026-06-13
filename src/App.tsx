@@ -54,7 +54,8 @@ function App() {
         "Optimized outreach timing through segmentation dashboards.",
         "Presented predictive insights to senior leadership."
       ],
-      conclusion: "The project combined predictive modeling and BI dashboards to support data-driven member engagement strategy."
+      conclusion: "The project combined predictive modeling and BI dashboards to support data-driven member engagement strategy.",
+      dashboardLink: ""
     },
     {
       title: "Market Entry & Financial Modeling Strategy",
@@ -73,7 +74,8 @@ function App() {
         "Delivered data-backed recommendations with Dean's List honorable mention.",
         "Produced market entry and financial modeling strategy for a social enterprise."
       ],
-      conclusion: "The project demonstrated market research, strategy modeling, and executive presentation skills in a competitive setting."
+      conclusion: "The project demonstrated market research, strategy modeling, and executive presentation skills in a competitive setting.",
+      dashboardLink: ""
     },
     {
       title: "Pricing Optimization & Consumer Segmentation Strategy",
@@ -92,7 +94,8 @@ function App() {
         "Developed pricing and acquisition strategy.",
         "Identified $39.7M in first-year net revenue potential."
       ],
-      conclusion: "The analysis translated segmentation and pricing research into revenue opportunity sizing."
+      conclusion: "The analysis translated segmentation and pricing research into revenue opportunity sizing.",
+      dashboardLink: ""
     },
     {
       title: "Business Performance & CPG Expansion Strategy",
@@ -111,7 +114,32 @@ function App() {
         "Validated a 15-20% operational load reduction.",
         "Placed 2nd among 20 teams."
       ],
-      conclusion: "The project combined SQL analysis, Power BI reporting, financial modeling, and strategic storytelling."
+      conclusion: "The project combined SQL analysis, Power BI reporting, financial modeling, and strategic storytelling.",
+      dashboardLink: ""
+    },
+    {
+      title: "Marketing & Customer Insights Strategy",
+      subtitle: "Tableau | Three-Tier Dashboard System for TechSpace",
+      category: "Marketing Analytics",
+      introduction: "Designed three connected Tableau dashboards — Global Overview, Continent Dashboard, and Customer Analysis — to transform sales data into actionable marketing insights for the Director of Marketing & Customer Insights at TechSpace.",
+      problem: "Marketing teams need a structured way to move from high-level global performance metrics down to regional insights and precise individual customer targeting to drive effective, personalized campaigns.",
+      objective: "Build an end-to-end BI storytelling system guiding the Director from a global health check through continental analysis to individual customer personas, enabling precise campaign execution at scale.",
+      methodology: [
+        "Designed a three-tier dashboard architecture creating a top-down analytical storyline: Global Overview → Continent Dashboard → Customer Analysis.",
+        "Built the Global Overview with KPI indicators (Total Sales, Profit Margin with trend arrows) and an interactive World Map that doubles as a filter, surfacing North America as the primary revenue driver.",
+        "Developed the Continent Dashboard with top 5 customer segments by total sales, customer loyalty distribution (One-time, Repeat 2–3 orders, Loyal 3+ orders), seasonal heat maps for peak purchasing windows, brand share analysis, and a Channel Comparison tool breaking down sales and profit across In-Store, Online, and Omnichannel.",
+        "Built the Customer Analysis dashboard using an RF (Recency & Frequency) Matrix segmenting the customer base into 12 groups, enabling isolation of specific personas such as Active Loyalists (males aged 21–30 in Business & Administration).",
+        "Integrated a Profitability & Product Mix view and a Customer Detail Table with names and keys to support targeted email campaigns and in-app notifications.",
+        "Used AI-assisted occupation grouping to categorize customers across occupational sectors for improved segmentation accuracy in Tableau."
+      ],
+      results: [
+        "Identified North America as the primary revenue driver with drill-down capability into continental and individual customer-level insights.",
+        "Revealed that Active Loyalists (males 21–30, Business & Administration) generate a 55.21% profit margin on Computer purchases.",
+        "Enabled cross-dimensional analysis: best campaign launch timing by product category and region, channel mix performance by country, and brand dominance by geography.",
+        "Provided a Customer Detail Table empowering the marketing team to execute personalized email and in-app campaigns against precisely defined personas."
+      ],
+      conclusion: "The three-tier dashboard system enables TechSpace's Director of Marketing to transition from global performance observations to precise campaign execution — identifying which products and brands to feature, which channels to prioritize, and which individual customers to target for maximum growth impact.",
+      dashboardLink: ""
     }
   ];
 
@@ -496,6 +524,20 @@ function App() {
                   {projects[selectedProject].conclusion}
                 </p>
               </div>
+
+              {projects[selectedProject].dashboardLink && (
+                <div>
+                  <h3 className="text-lg font-display text-black mb-3 tracking-wide">DASHBOARD</h3>
+                  <a
+                    href={projects[selectedProject].dashboardLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 font-light tracking-wide hover:bg-brown transition-all duration-300"
+                  >
+                    View Dashboard <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>
