@@ -139,7 +139,7 @@ function App() {
         "Provided a Customer Detail Table empowering the marketing team to execute personalized email and in-app campaigns against precisely defined personas."
       ],
       conclusion: "The three-tier dashboard system enables TechSpace's Director of Marketing to transition from global performance observations to precise campaign execution — identifying which products and brands to feature, which channels to prioritize, and which individual customers to target for maximum growth impact.",
-      dashboardLink: ""
+      dashboardLink: "https://drive.google.com/file/d/1q2mS7fM1qkJYu1wu8_BX0v5XJugedbtY/view?usp=sharing"
     }
   ];
 
